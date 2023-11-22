@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><span data-th-text="${firstName}"></span></p>
+    <h1>
+        <span data-th-text="${currDate}"></span>
+    </h1>
+
+    <div data-th-if="${myAge le 21}">
+        <p>Kiddo !</p>
+    </div>
+    <div data-th-if="${myAge gt 21}">
+        <p>Adult</p>
+    </div>
+    <div th:each="item : ${items}">
+        <div >
+            <span data-th-text="${item.itemName}">
+        </div>
+        <div>
+            <span data-th-text="${item.quantity}">
+        </div>
+    </div>
+
+    <a href="/cart">Go to Cart Page</a>
+    
+</body>
+</html>
